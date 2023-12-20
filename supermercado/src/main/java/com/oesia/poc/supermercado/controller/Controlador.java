@@ -75,9 +75,7 @@ public class Controlador {
 
     // Cliente
     @PostMapping("/cliente")
-    public Cliente createCliente(@RequestBody Cliente cliente) {
-        return clienteService.createCliente(cliente);
-    }
+    public Cliente createCliente(@RequestBody Cliente cliente) { return clienteService.createCliente(cliente); }
 
     @GetMapping("/cliente")
     public List<Cliente> getAllClientes() {
@@ -87,6 +85,21 @@ public class Controlador {
     @GetMapping("/cliente/{id}")
     public Optional<Cliente> findClienteById(@PathVariable int id) {
         return clienteService.findClienteById(id);
+    }
+
+    @PostMapping("/login")
+    public Cliente login(@RequestBody Cliente cliente) {
+        System.out.println(cliente);
+        try {
+            Cliente cliente1 = clienteService.findClienteByCorreo(cliente.getCorreo());
+            if (cliente1.getClave().equals(cliente.getClave())) {
+                return cliente1;
+            }
+            return null;
+        } catch (Exception e){
+            System.out.println(e);
+            return null;
+        }
     }
 
     @DeleteMapping("/cliente/{id}")

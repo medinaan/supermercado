@@ -110,4 +110,21 @@ public class Cliente {
     public void setRol(Rol rol) {
         this.rol = rol;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "idCliente=" + idCliente +
+                ", nombre='" + nombre + '\'' +
+                ", apellidos='" + apellidos + '\'' +
+                ", DNI='" + DNI + '\'' +
+                ", direccion='" + direccion + '\'' +
+                ", correo='" + correo + '\'' +
+                ", clave='" + clave + '\'' +
+                ", estado='" + estado + '\'' +
+                ", telefono=" + telefono +
+                ", rol=" + (rol != null ? rol.toString() : null) +
+                '}';
+    }
+
 }

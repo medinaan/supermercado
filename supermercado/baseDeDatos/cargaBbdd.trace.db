@@ -1,0 +1,7 @@
+2023-11-30 13:26:07 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CLIENTE" not found (this database is empty); SQL statement:
+INSERT INTO CLIENTE (DNI, APELLIDOS, CLAVE, CORREO, DIRECCION, ESTADO, NOMBRE, TELEFONO)
+VALUES (987654321, 'Rodríguez', '123456789', 'rodriguez@hotmail.com', 'Avenida Central 456, Pueblo', 'Activo', 'María', '5557890123') [42104-214]
+2023-11-30 13:32:35 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ROL" not found (this database is empty); SQL statement:
+insert into rol (id_rol, descripcion, estado, nombre) values (default, ?, ?, ?) [42104-214]

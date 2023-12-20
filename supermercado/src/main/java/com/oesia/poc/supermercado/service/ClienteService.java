@@ -20,9 +20,9 @@ public class ClienteService {
         return clienteRepository.findAll();
     }
 
-    public Optional<Cliente> findClienteById(int id) {
-        return clienteRepository.findById(id);
-    }
+    public Optional<Cliente> findClienteById(int id) { return clienteRepository.findById(id); }
+
+    public Cliente findClienteByCorreo(String correo) { return clienteRepository.findByCorreo(correo); }
 
     public void deleteClienteById(int id) {
         clienteRepository.deleteById(id);
