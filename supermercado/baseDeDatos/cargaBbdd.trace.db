@@ -5,3 +5,68 @@ VALUES (987654321, 'Rodríguez', '123456789', 'rodriguez@hotmail.com', 'Avenida 
 2023-11-30 13:32:35 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ROL" not found (this database is empty); SQL statement:
 insert into rol (id_rol, descripcion, estado, nombre) values (default, ?, ?, ?) [42104-214]
+2023-12-29 08:17:46 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CLIENTES" no encontrada
+Table "CLIENTES" not found; SQL statement:
+INSERT INTO Clientes (Nombre, Apellidos, DNI, Direccion, Id_Rol, Correo, Clave, Estado, Telefono) VALUES ('Miguel', 'Saavedra Gómez', '23456789B', 'Prueba', 2, 'miguel_saavedra@hotmail.com', 'cliente', 'Activo', 956443321) [42102-214]
+2023-12-29 09:41:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CESTAS_COMPRAS" no encontrada
+Table "CESTAS_COMPRAS" not found; SQL statement:
+INSERT INTO Cestas_Compras (Id_Cliente, Estado) VALUES (20, 'Finalizado') [42102-214]
+2023-12-29 09:41:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CESTAS_COMPRAS" no encontrada
+Table "CESTAS_COMPRAS" not found; SQL statement:
+INSERT INTO Cestas_Compras (Id_Cliente, Estado) VALUES (20, 'En Proceso') [42102-214]
+2023-12-29 09:41:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CESTAS_COMPRAS" no encontrada
+Table "CESTAS_COMPRAS" not found; SQL statement:
+INSERT INTO Cestas_Compras (Id_Cliente, Estado) VALUES (20, 'Finalizado') [42102-214]
+2023-12-29 09:41:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CESTAS_COMPRAS" no encontrada
+Table "CESTAS_COMPRAS" not found; SQL statement:
+INSERT INTO Cestas_Compras (Id_Cliente, Estado) VALUES (20, 'En Proceso') [42102-214]
+2023-12-29 10:45:52 jdbc[24]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CESTAS_COMPRAS" no encontrada
+Table "CESTAS_COMPRAS" not found; SQL statement:
+INSERT INTO Cestas_Compras (Id_Cliente, Fecha_Compra, Estado) VALUES (21, CURRENT_DATE, 'En Proceso') [42102-214]
+2023-12-29 10:45:52 jdbc[24]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CESTAS_COMPRAS" no encontrada
+Table "CESTAS_COMPRAS" not found; SQL statement:
+INSERT INTO Cestas_Compras (Id_Cliente, Fecha_Compra, Estado) VALUES (21, CURRENT_DATE, 'Finalizado') [42102-214]
+2023-12-29 10:45:52 jdbc[24]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CESTAS_COMPRAS" no encontrada
+Table "CESTAS_COMPRAS" not found; SQL statement:
+INSERT INTO Cestas_Compras (Id_Cliente, Fecha_Compra, Estado) VALUES (21, CURRENT_DATE, 'Finalizado') [42102-214]
+2023-12-29 10:45:52 jdbc[24]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "CESTAS_COMPRAS" no encontrada
+Table "CESTAS_COMPRAS" not found; SQL statement:
+INSERT INTO Cestas_Compras (Id_Cliente, Fecha_Compra, Estado) VALUES (21, CURRENT_DATE, 'En Proceso') [42102-214]
+2023-12-29 10:47:44 jdbc[24]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "DELETE FROM cesta_compra WHERE fecha_compra [*]IIS NULL"
+Syntax error in SQL statement "DELETE FROM cesta_compra WHERE fecha_compra [*]IIS NULL"; SQL statement:
+DELETE FROM cesta_compra WHERE fecha_compra IIS NULL [42000-214]
+2023-12-29 11:05:55 jdbc[39]: null
+org.h2.message.DbException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:364)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:476)
+	at com.zaxxer.hikari.pool.HikariPool.access$100(HikariPool.java:71)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:726)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: La conexión no fue cerrada por la aplicación y esta siendo limpiada (garbage collected)
+The connection was not closed by the application and is garbage collected [90018-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:678)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	... 17 more
