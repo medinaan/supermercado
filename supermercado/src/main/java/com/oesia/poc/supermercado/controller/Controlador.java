@@ -31,6 +31,9 @@ public class Controlador {
     @Autowired
     private RolService rolService;
 
+    @Autowired
+    private HistorialCompraService historialCompraService;
+
     // Categoria
     @PostMapping("/categoria")
     public Categoria createCategoria(@RequestBody Categoria categoria) {
