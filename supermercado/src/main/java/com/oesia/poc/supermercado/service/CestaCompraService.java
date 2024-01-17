@@ -24,6 +24,10 @@ public class CestaCompraService {
         return cestaCompraRepository.findById(id);
     }
 
+    public List<CestaCompra> obtenerCestasPorCliente(int clienteId){
+        return cestaCompraRepository.findByClienteIdCliente(clienteId);
+    }
+
     public void deleteCestaCompraById(int id) {
         cestaCompraRepository.deleteById(id);
     }
