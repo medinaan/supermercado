@@ -9,7 +9,5 @@ import java.util.List;
 @Repository
 public interface DetalleCompraRepository extends JpaRepository<DetalleCompra, Integer> {
 
-    List<DetalleCompraDTO> getHistorialComprasUsuario(String clienteId);
-
     List<DetalleCompra> findByClienteId(int clienteId);
 }
