@@ -1,5 +1,6 @@
 package com.oesia.poc.supermercado.service;
 
+import com.oesia.poc.supermercado.model.DetalleCompra;
 import com.oesia.poc.supermercado.repository.DetalleCompraRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
