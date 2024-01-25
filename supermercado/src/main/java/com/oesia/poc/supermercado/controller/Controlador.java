@@ -63,10 +63,10 @@ public class Controlador {
         return cestaCompraService.getAllCestaCompras();
     }
 
-  //  @GetMapping("/cestacompra/{id}")
-  //  public Optional<CestaCompra> findCestaCompraById(@PathVariable int id) {
-  //      return cestaCompraService.findCestaCompraById(id);
-  //  }
+    //  @GetMapping("/cestacompra/{id}")
+    //  public Optional<CestaCompra> findCestaCompraById(@PathVariable int id) {
+    //      return cestaCompraService.findCestaCompraById(id);
+    //  }
 
     @DeleteMapping("/cestacompra/{id}")
     public void deleteCestaCompraById(@PathVariable int id) {
